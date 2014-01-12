@@ -10,7 +10,7 @@
 			"homepage": "http://vinkla.com"
 		}
 	],
-	"minimum-stability": "dev-master",
+	"minimum-stability": "master",
 	"require": {
 		"php": ">=5.3.0"
 	},
