@@ -3,7 +3,8 @@ Base62 Algorithm Composer package
 
 Convert integers to [base62](http://en.wikipedia.org/wiki/62) strings and back.
 
-**Installation**
+Installation
+--------------
 This is class is in the [Packagist repository](https://packagist.org/packages/vinkla/base62) and can be installed like any other [Composer](https://getcomposer.org/) package.
 
 ```json
@@ -14,8 +15,8 @@ This is class is in the [Packagist repository](https://packagist.org/packages/vi
 }
 ```
 
-
-**Usage**
+Usage
+--------------
 ```php
 <?php
 
