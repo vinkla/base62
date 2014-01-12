@@ -3,9 +3,8 @@ Base62 Algorithm
 
 Convert integers to [base62](http://en.wikipedia.org/wiki/62) strings and back.
 
-***Usage***
+**Usage**
 ```php
-
 <?php
 
 require('vendor/autoload.php');
@@ -19,6 +18,4 @@ Base62::encode(4815162342); // 5fRVGK
  * Convert a from a given base to base 10.
  */
 Base62::decode('5fRVGK'); // 4815162342
-
-
 ```
