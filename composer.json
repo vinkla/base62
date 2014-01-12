@@ -1,20 +1,22 @@
 {
-    "name": "vinkla/base62",
-    "description": "Base62 Algorithm. Convert integers to base62 strings and back.",
-    "homepage": "https://github.com/vinkla/base62",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Vincent Klaiber",
-            "email": "vincentklaiber@gmail.com",
-            "homepage": "http://vinkla.com"
-        }
-    ],
-    "minimum-stability": "dev-master",
+	"name": "vinkla/base62",
+	"description": "Base62 Algorithm. Convert integers to base62 strings and back.",
+	"homepage": "https://github.com/vinkla/base62",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Vincent Klaiber",
+			"email": "vincentklaiber@gmail.com",
+			"homepage": "http://vinkla.com"
+		}
+	],
+	"minimum-stability": "dev-master",
 	"require": {
-        "php": ">=5.3.0"
-    },
-    "autoload": {
-		"psr-0": { "Base62": "src/" }
-    }
+		"php": ">=5.3.0"
+	},
+	"autoload": {
+		"psr-0": {
+			"Base62": "src/"
+		}
+	}
 }
