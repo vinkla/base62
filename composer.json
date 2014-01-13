@@ -18,8 +18,5 @@
 		"psr-0": {
 			"Base62": "src/"
 		}
-	},
-	"archive": {
-		"exclude": ["!vendor", "tests", "composer.phar"]
 	}
 }
