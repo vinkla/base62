@@ -1,4 +1,4 @@
-<?php
+<?php namespace Vinkla;
 
 class Base62 {
 
@@ -7,7 +7,7 @@ class Base62 {
 	 *
 	 * @var string
 	 */
-	private static $base = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	private $base = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 	/**
 	 * Convert a from a given base to base 10.
@@ -16,14 +16,14 @@ class Base62 {
 	 * @param int $base
 	 * @return int
 	 */
-	public static function decode($value, $b = 62)
+	public function decode($value, $b = 62)
 	{
 		$limit = strlen($value);
-		$result = strpos(static::$base, $value[0]);
+		$result = strpos($this->base, $value[0]);
 
 		for ($i = 1; $i < $limit; $i++)
 		{
-			$result = $b * $result + strpos(static::$base, $value[$i]);
+			$result = $b * $result + strpos($this->base, $value[$i]);
 		}
 
 		return $result;
@@ -36,17 +36,17 @@ class Base62 {
 	 * @param int $base
 	 * @return string
 	 */
-	public static function encode($value, $b = 62)
+	public function encode($value, $b = 62)
 	{
 		$r = (int)$value % $b;
-		$result = static::$base[$r];
+		$result = $this->base[$r];
 		$q = floor((int)$value / $b);
 
 		while ($q)
 		{
 			$r = $q % $b;
 			$q = floor($q / $b);
-			$result = static::$base[$r].$result;
+			$result = $this->base[$r].$result;
 		}
 
 		return $result;
