@@ -1,4 +1,4 @@
-<?php namespace Vinkla\Base62\Facades\Base62;
+<?php namespace Vinkla\Base62\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
