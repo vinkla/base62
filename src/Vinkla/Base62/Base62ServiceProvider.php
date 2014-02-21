@@ -5,6 +5,13 @@ use Illuminate\Support\ServiceProvider;
 class Base62ServiceProvider extends ServiceProvider {
 
 	/**
+	 * Indicates if loading of the provider is deferred.
+	 *
+	 * @var bool
+	 */
+	protected $defer = false;
+
+	/**
 	 * Register the service provider.
 	 *
 	 * @return void
@@ -23,5 +30,15 @@ class Base62ServiceProvider extends ServiceProvider {
 			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
 			$loader->alias('Base62', 'Vinkla\Base62\Facades\Base62');
 		});
+	}
+
+	/**
+	 * Get the services provided by the provider.
+	 *
+	 * @return array
+	 */
+	public function provides()
+	{
+		return array('base62');
 	}
 }
