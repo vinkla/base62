@@ -17,11 +17,11 @@ This is class is in the [Packagist repository](https://packagist.org/packages/vi
 }
 ```
 
-#### Using laravel?
-
+Using laravel?
+--------------
 If you're using laravel and want to use a more laravel-like and cleaner syntax you only have to follow these steps.
 
-First open your app/config/app.php file and scroll down to your providers and add the following.
+Open your ```app/config/app.php``` file and scroll down to your providers and add the following.
 
 ```php
 'providers' => array(
