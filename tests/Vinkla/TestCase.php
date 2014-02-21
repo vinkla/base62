@@ -1,4 +1,4 @@
-<?php namespace Vinkla;
+<?php namespace Vinkla\Base62;
 
 class TestCase extends \PHPUnit_Framework_TestCase {
 
