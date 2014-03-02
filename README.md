@@ -4,6 +4,9 @@ Base62 Algorithm
 Convert integers to [base62](http://en.wikipedia.org/wiki/62) strings and back.
 
 [![Build Status](https://travis-ci.org/vinkla/base62.png?branch=master)](https://travis-ci.org/vinkla/base62)
+[![Latest Stable Version](https://poser.pugx.org/vinkla/base62/v/stable.png)](https://packagist.org/packages/vinkla/base62)
+[![Total Downloads](https://poser.pugx.org/vinkla/base62/downloads.png)](https://packagist.org/packages/vinkla/base62)
+[![License](https://poser.pugx.org/vinkla/base62/license.png)](https://packagist.org/packages/vinkla/base62)
 
 Installation
 ------------
@@ -12,7 +15,7 @@ This is class is in the [Packagist repository](https://packagist.org/packages/vi
 ```json
 {
 	"require": {
-		"vinkla/base62": "dev-master"
+		"vinkla/base62": "1.0.*@dev"
 	}
 }
 ```
