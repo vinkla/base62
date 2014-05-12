@@ -1,9 +1,8 @@
-Base62 Algorithm
+Base62 Algorithm [![Build Status](https://travis-ci.org/vinkla/base62.png?branch=master)](https://travis-ci.org/vinkla/base62)
 ================
 
 Base62 Algorithm Composer package. Convert integers to [base62](http://en.wikipedia.org/wiki/62) strings and back.
 
-[![Build Status](https://travis-ci.org/vinkla/base62.png?branch=master)](https://travis-ci.org/vinkla/base62)
 
 Installation
 ------------
@@ -12,7 +11,7 @@ This is class is in the [Packagist repository](https://packagist.org/packages/vi
 ```json
 {
 	"require": {
-		"vinkla/base62": "1.0.*@dev"
+		"vinkla/base62": "~1.0"
 	}
 }
 ```
