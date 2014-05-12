@@ -16,13 +16,8 @@ This is class is in the [Packagist repository](https://packagist.org/packages/vi
 }
 ```
 
-Using laravel?
---------------
-If you're using [Laravel](http://laravel.com) and want to use a more Laravel-like syntax you have to add the class to Laravel providers array located within ```app/config/app.php```.
+If using [Laravel](http://laravel.com) (not required), add the service provider to ```app/config/app.php``` in the providers array.
 
 ```php
-'providers' => array(
-	...
-	'Vinkla\Base62\Base62ServiceProvider',
-)
+	'Vinkla\Base62\Base62ServiceProvider'
 ```
