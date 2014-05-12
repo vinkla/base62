@@ -19,5 +19,5 @@ This is class is in the [Packagist repository](https://packagist.org/packages/vi
 If using [Laravel](http://laravel.com) (not required), add the service provider to ```app/config/app.php``` in the providers array.
 
 ```php
-	'Vinkla\Base62\Base62ServiceProvider'
+'Vinkla\Base62\Base62ServiceProvider'
 ```
