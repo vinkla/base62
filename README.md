@@ -28,11 +28,11 @@ Here's an example.
 ```php
 <?php
 
-use Vinkla\Base62;
+$base62 = new Vinkla\Base62();
 
 // Encode
-$string = Base62::encode(36); // Returns 'A'
+$string = $base62->encode(36); // Returns 'A'
 
 // Decode
-$int = Base62::decode($string); // Returns '36'
+$int = $base62->decode($string); // Returns '36'
 ```
