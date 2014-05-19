@@ -24,7 +24,7 @@ If using [Laravel](http://laravel.com) (not required), add the service provider 
 
 Usage
 -----
-Here's an encoding example.
+Here's an example.
 ```php
 <?php
 
