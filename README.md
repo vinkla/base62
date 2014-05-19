@@ -30,17 +30,9 @@ Here's an encoding example. When
 
 use Vinkla\Base62;
 
-/**
- * Encode a integer.
- * @var string
- */
+// Encode
 $string = Base62::encode(36); // Returns 'A'
 
-/**
- * Decode a string.
- * @var integer
- */
+// Decode
 $int = Base62::decode($string); // Returns '36'
-
-
 ```
