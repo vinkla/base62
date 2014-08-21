@@ -3,10 +3,16 @@
 	"description": "Base62 Algorithm. Convert integers to base62 strings and back.",
 	"homepage": "https://github.com/vinkla/base62",
 	"license": "MIT",
+	"keywords": [
+		"laravel",
+		"eloquent",
+		"uuid",
+		"base62"
+	],
 	"authors": [
 		{
 			"name": "Vincent Klaiber",
-			"email": "vincentklaiber@gmail.com",
+			"email": "me@vinkla.com",
 			"homepage": "http://vinkla.com"
 		}
 	],
