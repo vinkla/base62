@@ -38,6 +38,6 @@ $string = $base62->encode(36); // Returns 'A'
 $int = $base62->decode($string); // Returns '36'
 ```
 
-### License
+## License
 
 The Base62 package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
