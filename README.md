@@ -29,8 +29,6 @@ Usage
 -----
 Here's an example.
 ```php
-<?php
-
 $base62 = new Vinkla\Base62();
 
 // Encode
