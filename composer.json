@@ -16,7 +16,6 @@
 			"homepage": "http://vinkla.com"
 		}
 	],
-	"minimum-stability": "dev",
 	"require": {
 		"php": ">=5.3.0"
 	},
@@ -28,5 +27,6 @@
 		"psr-0": {
 			"Vinkla\\Base62": "src/"
 		}
-	}
+	},
+	"minimum-stability": "stable"
 }
