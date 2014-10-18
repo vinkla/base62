@@ -3,7 +3,7 @@
 <phpunit colors="true" bootstrap="vendor/autoload.php">
     <testsuites>
         <testsuite name="Base62 Test Suite">
-            <directory>./tests/Vinkla/TestCase.php</directory>
+            <directory>./tests/TestCase.php</directory>
         </testsuite>
     </testsuites>
 </phpunit>

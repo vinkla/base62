@@ -29,13 +29,11 @@ Usage
 -----
 Here's an example.
 ```php
-$base = new Base62();
-
 // Encode
-$base->encode(36); // Returns 'A'
+Base62::encode(36); // Returns 'A'
 
 // Decode
-$base->decode($string); // Returns '36'
+Base62::decode('A'); // Returns '36'
 ```
 
 ## License

@@ -3,16 +3,16 @@
 class Base62 {
 
 	/**
-	 * @var string
+	 * @var mixed
 	 */
-	protected $base;
+	private $app;
 
 	/**
-	 * @param $base
+	 * @param $app
 	 */
-	function __construct($base)
+	function __construct($app)
 	{
-		$this->base = $base;
+		$this->app = $app;
 	}
 
 	/**
@@ -24,6 +24,7 @@ class Base62 {
 	 */
 	public function decode($value, $b = 62)
 	{
+		$base = $this->getBase();
 		$limit = strlen($value);
 		$result = strpos($this->base, $value[0]);
 
@@ -44,18 +45,26 @@ class Base62 {
 	 */
 	public function encode($value, $b = 62)
 	{
+		$base = $this->getBase();
 		$r = (int) $value % $b;
-		$result = $this->base[$r];
+		$result = $base[$r];
 		$q = floor((int) $value / $b);
 
 		while ($q)
 		{
 			$r = $q % $b;
 			$q = floor($q / $b);
-			$result = $this->base[$r].$result;
+			$result = $base[$r] . $result;
 		}
 
 		return $result;
 	}
 
+	/**
+	 * @return string
+	 */
+	public function getBase()
+	{
+		return $this->app['config']['base62.base'];
+	}
 }

@@ -10,7 +10,7 @@ class Base62ServiceProvider extends ServiceProvider {
 	 *
 	 * @var bool
 	 */
-	protected $defer = false;
+	protected $defer = true;
 
 	/**
 	 * Register the service provider.
@@ -19,21 +19,21 @@ class Base62ServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		// Get the configuration component.
-		$config = $this->app->make('config');
-
 		// Register 'base62' instance container to our Base62 object.
-		$this->app['base62'] = $this->app->share(function() use ($config)
+		$this->app->bindShared('Vinkla\Base62\Contracts\Base62', function($app)
 		{
-			return new Base62($config->get('base62.base'));
+			return new Base62($app);
 		});
+	}
 
-		// Shortcut so developers don't need to add an alias in config/app.php.
-		$this->app->booting(function()
-		{
-			$loader = AliasLoader::getInstance();
-			$loader->alias('Base62', 'Vinkla\Base62\Facades\Base62');
-		});
+	/**
+	 * Bootstrap the application events.
+	 *
+	 * @return void
+	 */
+	public function boot()
+	{
+		$this->package('vinkla/base62');
 	}
 
 	/**

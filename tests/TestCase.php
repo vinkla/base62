@@ -1,12 +1,20 @@
-<?php namespace Vinkla\Base62;
+<?php
 
-class TestCase extends \PHPUnit_Framework_TestCase{
+use Vinkla\Base62\Base62;
+
+class TestCase extends PHPUnit_Framework_TestCase {
 
     protected $base = null;
 
+    protected $string = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+    public function testThatProfilerCanBeCreated()
+    {
+        new Base62($this->string);
+    }
+
     public function setUp() {
-        $string = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-        $this->base = new Base62($string);
+        $this->base = new Base62($this->string);
     }
 
     public function testEncode() {
