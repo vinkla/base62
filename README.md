@@ -9,12 +9,12 @@ Base62 Algorithm package, convert integers to [base62](http://en.wikipedia.org/w
 
 Installation
 ------------
-This is class is in the [Packagist repository](https://packagist.org/packages/vinkla/base62) and can be installed like any other [Composer](https://getcomposer.org/) package.
+Require this package in your `composer.json` and update composer.
 
 ```json
 {
 	"require": {
-		"vinkla/base62": "~1.0"
+		"vinkla/base62": "~1.1"
 	}
 }
 ```
@@ -25,17 +25,27 @@ If using [Laravel](http://laravel.com) (not required), add the service provider 
 'Vinkla\Base62\Base62ServiceProvider'
 ```
 
+If you want you can use the facade for shorter code. Add the class to your aliases array.
+```php
+'Vinkla\Base62\Facades\Base62'
+```
+
+To add the configuration file to your `app/config/packages` directory, run the command below.
+```bash
+php artisan publish:config vinkla/base62
+```
+
 Usage
 -----
 Here's an example.
 ```php
-$base62 = new Vinkla\Base62();
+$base = new Base('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'); 
 
 // Encode
-$string = $base62->encode(36); // Returns 'A'
+$base->encode(4815162342); // Returns '5fRVGK'
 
 // Decode
-$int = $base62->decode($string); // Returns '36'
+$base->decode('5fRVGK'); // Returns '4815162342'
 ```
 
 ## License
