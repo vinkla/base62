@@ -1,11 +1,13 @@
 Base62 Algorithm
 ================
-[![Build Status](https://img.shields.io/travis/vinkla/base62/master.svg?style=flat)](https://travis-ci.org/vinkla/base62)
-[![Latest Stable Version](http://img.shields.io/packagist/v/vinkla/base62.svg?style=flat)](https://packagist.org/packages/vinkla/base62)
-[![License](https://img.shields.io/packagist/l/vinkla/base62.svg?style=flat)](https://packagist.org/packages/vinkla/base62)
+
+![image](https://raw.githubusercontent.com/vinkla/vinkla.github.io/master/images/base62-package.png)
 
 Base62 Algorithm package, convert integers to [base62](http://en.wikipedia.org/wiki/62) strings and back. Works well with [Laravel](https://github.com/laravel/laravel).
 
+[![Build Status](https://img.shields.io/travis/vinkla/base62/master.svg?style=flat)](https://travis-ci.org/vinkla/base62)
+[![Latest Stable Version](http://img.shields.io/packagist/v/vinkla/base62.svg?style=flat)](https://packagist.org/packages/vinkla/base62)
+[![License](https://img.shields.io/packagist/l/vinkla/base62.svg?style=flat)](https://packagist.org/packages/vinkla/base62)
 
 Installation
 ------------
@@ -39,7 +41,7 @@ Usage
 -----
 Here's an example.
 ```php
-$base = new Base62('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'); 
+$base = new Base62('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
 // Encode
 $base->encode(4815162342); // Returns '5fRVGK'
