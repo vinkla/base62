@@ -6,24 +6,15 @@ class TestCase extends PHPUnit_Framework_TestCase {
 
     protected $base = null;
 
-    protected $string = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-    public function testThatBase62CanBeCreated()
-    {
-        new Base62($this->string);
-    }
-
     public function setUp() {
-        $this->base = new Base62($this->string);
+        $this->base = new Base62('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
     }
 
     public function testEncode() {
-        $converted = $this->base->encode(36);
-        $this->assertEquals('A', $converted);
+        $this->assertEquals('5fRVGK', $this->base->encode(4815162342));
     }
 
     public function testDecode() {
-        $reversed = $this->base->decode('A');
-        $this->assertEquals(36, $reversed);
+        $this->assertEquals(4815162342, $this->base->decode('5fRVGK'));
     }
 }
