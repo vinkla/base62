@@ -8,7 +8,7 @@ class TestCase extends PHPUnit_Framework_TestCase {
 
     protected $string = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-    public function testThatProfilerCanBeCreated()
+    public function testThatBase62CanBeCreated()
     {
         new Base62($this->string);
     }

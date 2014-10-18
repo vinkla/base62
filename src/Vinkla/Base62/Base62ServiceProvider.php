@@ -22,7 +22,7 @@ class Base62ServiceProvider extends ServiceProvider {
 		// Register 'base62' instance container to our Base62 object.
 		$this->app->bindShared('Vinkla\Base62\Contracts\Base62', function($app)
 		{
-			return new Base62($app);
+			return new Base62($app['config']['base62::base']);
 		});
 	}
 

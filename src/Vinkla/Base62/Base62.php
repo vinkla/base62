@@ -1,18 +1,20 @@
 <?php namespace Vinkla\Base62;
 
-class Base62 {
+class Base62 implements Contracts\Base62 {
 
 	/**
-	 * @var mixed
+	 * The base string.
+	 *
+	 * @var string
 	 */
-	private $app;
+	protected $base;
 
 	/**
-	 * @param $app
+	 * @param $base
 	 */
-	function __construct($app)
+	function __construct($base)
 	{
-		$this->app = $app;
+		$this->base = $base;
 	}
 
 	/**
@@ -24,7 +26,6 @@ class Base62 {
 	 */
 	public function decode($value, $b = 62)
 	{
-		$base = $this->getBase();
 		$limit = strlen($value);
 		$result = strpos($this->base, $value[0]);
 
@@ -45,26 +46,18 @@ class Base62 {
 	 */
 	public function encode($value, $b = 62)
 	{
-		$base = $this->getBase();
 		$r = (int) $value % $b;
-		$result = $base[$r];
+		$result = $this->base[$r];
 		$q = floor((int) $value / $b);
 
 		while ($q)
 		{
 			$r = $q % $b;
 			$q = floor($q / $b);
-			$result = $base[$r] . $result;
+			$result = $this->base[$r] . $result;
 		}
 
 		return $result;
 	}
 
-	/**
-	 * @return string
-	 */
-	public function getBase()
-	{
-		return $this->app['config']['base62.base'];
-	}
 }
