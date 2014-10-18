@@ -1,5 +1,6 @@
 <?php namespace Vinkla\Base62;
 
+use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
 class Base62ServiceProvider extends ServiceProvider {
@@ -18,16 +19,19 @@ class Base62ServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		// Register 'base62' instance container to our Base62 object
-		$this->app['base62'] = $this->app->share(function($app)
+		// Get the configuration component.
+		$config = $this->app->make('config');
+
+		// Register 'base62' instance container to our Base62 object.
+		$this->app['base62'] = $this->app->share(function() use ($config)
 		{
-			return new Base62;
+			return new Base62($config->get('base62.base'));
 		});
 
-		// Shortcut so developers don't need to add an Alias in app/config/app.php
+		// Shortcut so developers don't need to add an alias in config/app.php.
 		$this->app->booting(function()
 		{
-			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
+			$loader = AliasLoader::getInstance();
 			$loader->alias('Base62', 'Vinkla\Base62\Facades\Base62');
 		});
 	}
@@ -39,6 +43,7 @@ class Base62ServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array('base62');
+		return ['Vinkla\Base62\Contracts\Base62'];
 	}
+
 }

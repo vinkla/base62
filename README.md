@@ -29,13 +29,13 @@ Usage
 -----
 Here's an example.
 ```php
-$base62 = new Vinkla\Base62();
+$base = new Base62();
 
 // Encode
-$string = $base62->encode(36); // Returns 'A'
+$base->encode(36); // Returns 'A'
 
 // Decode
-$int = $base62->decode($string); // Returns '36'
+$base->decode($string); // Returns '36'
 ```
 
 ## License

@@ -3,17 +3,23 @@
 class Base62 {
 
 	/**
-	 * The base string.
-	 *
 	 * @var string
 	 */
-	private $base = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	protected $base;
 
 	/**
-	 * Convert a from a given base to base 10.
+	 * @param $base
+	 */
+	function __construct($base)
+	{
+		$this->base = $base;
+	}
+
+	/**
+	 * Decode a string to a integer.
 	 *
 	 * @param string $value
-	 * @param int $base
+	 * @param int $b
 	 * @return int
 	 */
 	public function decode($value, $b = 62)
@@ -30,17 +36,17 @@ class Base62 {
 	}
 
 	/**
-	 * Convert from base 10 to another base.
+	 * Encode an integer to a string.
 	 *
 	 * @param int $value
-	 * @param int $base
+	 * @param int $b
 	 * @return string
 	 */
 	public function encode($value, $b = 62)
 	{
-		$r = (int)$value % $b;
+		$r = (int) $value % $b;
 		$result = $this->base[$r];
-		$q = floor((int)$value / $b);
+		$q = floor((int) $value / $b);
 
 		while ($q)
 		{
@@ -51,4 +57,5 @@ class Base62 {
 
 		return $result;
 	}
+
 }

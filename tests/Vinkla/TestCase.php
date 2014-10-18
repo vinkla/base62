@@ -1,20 +1,21 @@
 <?php namespace Vinkla\Base62;
 
-class TestCase extends \PHPUnit_Framework_TestCase {
+class TestCase extends \PHPUnit_Framework_TestCase{
 
-    protected $base62 = null;
+    protected $base = null;
 
     public function setUp() {
-        $this->base62 = new Base62();
+        $string = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $this->base = new Base62($string);
     }
 
     public function testEncode() {
-        $converted = $this->base62->encode(36);
+        $converted = $this->base->encode(36);
         $this->assertEquals('A', $converted);
     }
 
     public function testDecode() {
-        $reversed = $this->base62->decode('A');
+        $reversed = $this->base->decode('A');
         $this->assertEquals(36, $reversed);
     }
 }

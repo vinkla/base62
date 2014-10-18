@@ -10,4 +10,5 @@ class Base62 extends Facade {
 	 * @return string
 	 */
 	protected static function getFacadeAccessor() { return 'base62'; }
+
 }
