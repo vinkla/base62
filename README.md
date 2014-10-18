@@ -39,7 +39,7 @@ Usage
 -----
 Here's an example.
 ```php
-$base = new Base('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'); 
+$base = new Base62('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'); 
 
 // Encode
 $base->encode(4815162342); // Returns '5fRVGK'
