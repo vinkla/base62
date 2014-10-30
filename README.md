@@ -5,18 +5,28 @@ Base62 Algorithm
 
 Base62 Algorithm package, convert integers to [base62](http://en.wikipedia.org/wiki/62) strings and back. Works well with [Laravel](https://github.com/laravel/laravel).
 
+```php
+// Setup the Base62 instance.
+$base = new Base62('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+
+// Encode an integer.
+$base->encode(4815162342); // returns '5fRVGK'
+
+// Decode a string.
+$base->decode('5fRVGK'); // returns 4815162342
+```
+
 [![Build Status](https://img.shields.io/travis/vinkla/base62/master.svg?style=flat)](https://travis-ci.org/vinkla/base62)
 [![Latest Stable Version](http://img.shields.io/packagist/v/vinkla/base62.svg?style=flat)](https://packagist.org/packages/vinkla/base62)
 [![License](https://img.shields.io/packagist/l/vinkla/base62.svg?style=flat)](https://packagist.org/packages/vinkla/base62)
 
-Installation
-------------
+## Installation
 Require this package in your `composer.json` and update composer.
 
 ```json
 {
 	"require": {
-		"vinkla/base62": "~1.1"
+		"vinkla/base62": "~1.0"
 	}
 }
 ```
@@ -35,19 +45,6 @@ If you want you can use the facade for shorter code. Add the class to your alias
 To add the configuration file to your `app/config/packages` directory, run the command below.
 ```bash
 php artisan publish:config vinkla/base62
-```
-
-Usage
------
-Here's an example.
-```php
-$base = new Base62('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
-
-// Encode
-$base->encode(4815162342); // Returns '5fRVGK'
-
-// Decode
-$base->decode('5fRVGK'); // Returns '4815162342'
 ```
 
 ## License
