@@ -6,8 +6,11 @@ Base62 Algorithm
 Base62 Algorithm package, convert integers to [base62](http://en.wikipedia.org/wiki/62) strings and back. Works well with [Laravel](https://github.com/laravel/laravel).
 
 ```php
+// The base string.
+$string = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
 // Setup the Base62 instance.
-$base = new Base62('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+$base = new Base62($string);
 
 // Encode an integer.
 $base->encode(4815162342); // returns '5fRVGK'
