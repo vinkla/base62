@@ -40,7 +40,7 @@ If using [Laravel](http://laravel.com) (not required), add the service provider 
 'Vinkla\Base62\Base62ServiceProvider'
 ```
 
-If you want you can use the facade. Add the reference in ```config/app.php``` to your aliases array.
+If you want you can use the [facade](http://laravel.com/docs/4.2/facades). Add the reference in ```config/app.php``` to your aliases array.
 ```php
 'Base62' => 'Vinkla\Base62\Facades\Base62'
 ```
