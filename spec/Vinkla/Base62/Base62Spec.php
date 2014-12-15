@@ -3,8 +3,8 @@
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-class Base62Spec extends ObjectBehavior
-{
+class Base62Spec extends ObjectBehavior {
+
     function let()
     {
         $this->beConstructedWith('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
