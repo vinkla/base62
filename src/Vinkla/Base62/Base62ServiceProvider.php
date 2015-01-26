@@ -1,6 +1,5 @@
 <?php namespace Vinkla\Base62;
 
-use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
 class Base62ServiceProvider extends ServiceProvider {
@@ -19,21 +18,15 @@ class Base62ServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		// Register 'base62' instance container to our Base62 object.
-		$this->app->bindShared('Vinkla\Base62\Contracts\Base62', function($app)
-		{
-			return new Base62($app['config']['base62::base']);
-		});
-	}
+		$source = sprintf('%s/../../config/config.php', __DIR__);
+		$destination = config_path('base62.php');
 
-	/**
-	 * Bootstrap the application events.
-	 *
-	 * @return void
-	 */
-	public function boot()
-	{
-		$this->package('vinkla/base62');
+		$this->publishes([$source => $destination]);
+
+		$this->app->singleton('Vinkla\Base62\Contracts\Base62', function()
+		{
+			return new Base62(config('base62.base'));
+		});
 	}
 
 	/**

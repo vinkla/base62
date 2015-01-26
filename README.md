@@ -27,24 +27,27 @@ $base->decode('5fRVGK'); // returns 4815162342
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-composer require vinkla/base62:~1.0
+composer require vinkla/base62:~2.0
 ```
 
-If using [Laravel](http://laravel.com) (not required), add the service provider to ```config/app.php``` in the providers array.
+### Laravel
+If using [Laravel](http://laravel.com) **(not required)**, add the service provider to ```config/app.php``` in the providers array.
 
 ```php
 'Vinkla\Base62\Base62ServiceProvider'
 ```
 
-If you want you can use the [facade](http://laravel.com/docs/4.2/facades). Add the reference in ```config/app.php``` to your aliases array.
+If you want you can use the [facade](http://laravel.com/docs/facades). Add the reference in ```config/app.php``` to your aliases array.
 ```php
 'Base62' => 'Vinkla\Base62\Facades\Base62'
 ```
 
-To add the configuration file to your `app/config/packages` directory, run the command below.
+To add the configuration file to your `config` directory, run the command below.
 ```bash
-php artisan publish:config vinkla/base62
+php artisan vendor:publish
 ```
+
+Looking for Laravel 4 support? Please use version `~1.0` instead.
 
 ## License
 
