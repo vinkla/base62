@@ -18,8 +18,8 @@
 		"phpspec/phpspec": "~2.0"
 	},
 	"autoload": {
-		"psr-0": {
-			"Vinkla\\Base62": "src/"
+		"psr-4": {
+			"Vinkla\\Base62\\": "src/"
 		}
 	},
 	"minimum-stability": "stable"
