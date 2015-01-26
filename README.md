@@ -24,14 +24,10 @@ $base->decode('5fRVGK'); // returns 4815162342
 [![License](https://img.shields.io/packagist/l/vinkla/base62.svg?style=flat)](https://packagist.org/packages/vinkla/base62)
 
 ## Installation
-Require this package in your `composer.json` and update composer.
+Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
-```json
-{
-	"require": {
-		"vinkla/base62": "~1.0"
-	}
-}
+```bash
+composer require vinkla/base62:~1.0
 ```
 
 If using [Laravel](http://laravel.com) (not required), add the service provider to ```config/app.php``` in the providers array.
