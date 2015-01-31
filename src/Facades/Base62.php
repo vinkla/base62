@@ -9,6 +9,9 @@ class Base62 extends Facade {
 	 *
 	 * @return string
 	 */
-	protected static function getFacadeAccessor() { return 'Vinkla\Base62\Contracts\Base62'; }
+	protected static function getFacadeAccessor()
+	{
+		return 'base62';
+	}
 
 }

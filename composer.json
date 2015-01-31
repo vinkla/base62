@@ -22,5 +22,6 @@
 			"Vinkla\\Base62\\": "src/"
 		}
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "stable",
+	"prefer-stable": true
 }
