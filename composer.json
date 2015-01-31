@@ -3,7 +3,7 @@
 	"description": "Base62 Algorithm, convert integers to base62 strings and back.",
 	"homepage": "https://github.com/vinkla/base62",
 	"license": "MIT",
-	"keywords": ["laravel", "uuid", "base62"],
+	"keywords": ["laravel", "uuid", "base62", "base"],
 	"authors": [
 		{
 			"name": "Vincent Klaiber",
@@ -12,16 +12,21 @@
 		}
 	],
 	"require": {
-		"php": ">=5.4.0"
+		"php": ">=5.4.7"
 	},
 	"require-dev": {
-		"phpspec/phpspec": "~2.0"
+		"graham-campbell/testbench": "~2.0"
 	},
 	"autoload": {
 		"psr-4": {
 			"Vinkla\\Base62\\": "src/"
 		}
 	},
-	"minimum-stability": "stable",
+	"autoload-dev": {
+		"psr-4": {
+			"Vinkla\\Tests\\Base62\\": "tests/"
+		}
+	},
+	"minimum-stability": "dev",
 	"prefer-stable": true
 }

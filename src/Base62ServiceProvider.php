@@ -11,10 +11,18 @@ class Base62ServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
+		$this->setupConfig();
+	}
+
+	/**
+	 * Setup the config.
+	 *
+	 * @return void
+	 */
+	protected function setupConfig()
+	{
 		$source = realpath(__DIR__.'/../config/base62.php');
-
 		$this->publishes([$source => config_path('base62.php')]);
-
 		$this->mergeConfigFrom($source, 'base62');
 	}
 
@@ -25,9 +33,9 @@ class Base62ServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app->singleton('base62', function()
+		$this->app->singleton('base62', function($app)
 		{
-			return new Base62(config('base62.base'));
+			return new Base62($app['config']['base62.key']);
 		});
 
 		$this->app->alias('base62', 'Vinkla\Base62\Base62');
