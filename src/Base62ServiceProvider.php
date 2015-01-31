@@ -2,8 +2,8 @@
 
 use Illuminate\Support\ServiceProvider;
 
-class Base62ServiceProvider extends ServiceProvider
-{
+class Base62ServiceProvider extends ServiceProvider {
+
 	/**
 	 * Boot the service provider.
 	 *
