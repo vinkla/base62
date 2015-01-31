@@ -1,6 +1,6 @@
 <?php namespace Vinkla\Base62;
 
-class Base62 implements Contracts\Base62 {
+class Base62 {
 
 	/**
 	 * The base string.
