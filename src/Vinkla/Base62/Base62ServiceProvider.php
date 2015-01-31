@@ -12,17 +12,26 @@ class Base62ServiceProvider extends ServiceProvider {
 	protected $defer = true;
 
 	/**
+	 * Boot the service provider.
+	 *
+	 * @return void
+	 */
+	public function boot()
+	{
+		$source = sprintf('%s/../../config/config.php', __DIR__);
+
+		$this->publishes([$source => config_path('base62.php')]);
+
+		$this->mergeConfigFrom($source, 'base62.php');
+	}
+
+	/**
 	 * Register the service provider.
 	 *
 	 * @return void
 	 */
 	public function register()
 	{
-		$source = sprintf('%s/../../config/config.php', __DIR__);
-		$destination = config_path('base62.php');
-
-		$this->publishes([$source => $destination]);
-
 		$this->app->singleton('Vinkla\Base62\Contracts\Base62', function()
 		{
 			return new Base62(config('base62.base'));

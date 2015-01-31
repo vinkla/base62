@@ -1,4 +1,4 @@
-<?php namespace Vinkla\Base62\Contracts; 
+<?php namespace Vinkla\Base62\Contracts;
 
 interface Base62 {
 
