@@ -18,7 +18,7 @@ class Base62ServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$source = sprintf('%s/../../config/config.php', __DIR__);
+		$source = sprintf('%s/../../config/base62.php', __DIR__);
 
 		$this->publishes([$source => config_path('base62.php')]);
 
