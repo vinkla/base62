@@ -75,6 +75,7 @@ $base->decode('5fRVGK'); // returns 4815162342
 ```
 
 #### Laravel
+If you implement this package in a Laravel application, which isn't required, we've provided real world examples below.
 ```php
 // You can alias this in config/app.php.
 use Vinkla\Base62\Facades\Base62;
@@ -91,8 +92,7 @@ If you prefer to use dependency injection over facades like me, then you can inj
 ```php
 use Vinkla\Base62\Base62;
 
-class Foo
-{
+class Foo {
 	protected $base62;
 
 	public function __construct(Base62 $base62)
