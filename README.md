@@ -27,7 +27,7 @@ $base->decode('5fRVGK'); // returns 4815162342
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
 ```bash
-composer require "vinkla/base62=~2.0"
+composer require vinkla/base62:~2.0
 ```
 
 ## Laravel
