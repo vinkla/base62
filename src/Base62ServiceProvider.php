@@ -1,9 +1,11 @@
-<?php namespace Vinkla\Base62;
+<?php
+
+namespace Vinkla\Base62;
 
 use Illuminate\Support\ServiceProvider;
 
-class Base62ServiceProvider extends ServiceProvider {
-
+class Base62ServiceProvider extends ServiceProvider
+{
 	/**
 	 * Boot the service provider.
 	 *
@@ -50,5 +52,4 @@ class Base62ServiceProvider extends ServiceProvider {
 	{
 		return ['base62'];
 	}
-
 }

@@ -1,7 +1,9 @@
-<?php namespace Vinkla\Base62;
+<?php
 
-class Base62 {
+namespace Vinkla\Base62;
 
+class Base62
+{
 	/**
 	 * The base string.
 	 *
@@ -59,5 +61,4 @@ class Base62 {
 
 		return $result;
 	}
-
 }

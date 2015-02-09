@@ -1,10 +1,12 @@
-<?php namespace Vinkla\Tests\Base62\Facades;
+<?php
+
+namespace Vinkla\Tests\Base62\Facades;
 
 use GrahamCampbell\TestBench\Traits\FacadeTestCaseTrait;
 use Vinkla\Tests\Base62\AbstractTestCase;
 
-class Base62Test extends AbstractTestCase {
-
+class Base62Test extends AbstractTestCase
+{
 	use FacadeTestCaseTrait;
 
 	/**
@@ -36,5 +38,4 @@ class Base62Test extends AbstractTestCase {
 	{
 		return 'Vinkla\Base62\Base62';
 	}
-
 }

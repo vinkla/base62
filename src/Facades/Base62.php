@@ -1,9 +1,11 @@
-<?php namespace Vinkla\Base62\Facades;
+<?php
+
+namespace Vinkla\Base62\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class Base62 extends Facade {
-
+class Base62 extends Facade
+{
 	/**
 	 * Get the registered name of the component.
 	 *
@@ -13,5 +15,4 @@ class Base62 extends Facade {
 	{
 		return 'base62';
 	}
-
 }
