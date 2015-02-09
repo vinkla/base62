@@ -31,8 +31,7 @@ class Base62
 		$limit = strlen($value);
 		$result = strpos($this->base, $value[0]);
 
-		for ($i = 1; $i < $limit; $i++)
-		{
+		for ($i = 1; $i < $limit; $i++) {
 			$result = $b * $result + strpos($this->base, $value[$i]);
 		}
 
@@ -52,8 +51,7 @@ class Base62
 		$result = $this->base[$r];
 		$q = floor((int) $value / $b);
 
-		while ($q)
-		{
+		while ($q) {
 			$r = $q % $b;
 			$q = floor($q / $b);
 			$result = $this->base[$r] . $result;
