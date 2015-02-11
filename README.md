@@ -55,7 +55,7 @@ Please use `1.0` branch instead. Installable by requiring:
 composer require "vinkla/vimeo=~1.0"
 ```
 
-## Examples
+## Usage
 Here you can see an example of just how simple this package is to use.
 
 ```php
@@ -74,7 +74,7 @@ $base->encode(4815162342); // returns '5fRVGK'
 $base->decode('5fRVGK'); // returns 4815162342
 ```
 
-#### Laravel
+## Laravel Usage
 If you implement this package in a Laravel application, which isn't required, we've provided real world examples below.
 ```php
 // You can alias this in config/app.php.
