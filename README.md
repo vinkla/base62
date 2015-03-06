@@ -92,7 +92,8 @@ If you prefer to use dependency injection over facades like me, then you can inj
 ```php
 use Vinkla\Base62\Base62;
 
-class Foo {
+class Foo
+{
 	protected $base62;
 
 	public function __construct(Base62 $base62)
