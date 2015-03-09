@@ -1,6 +1,5 @@
 <?php namespace Vinkla\Tests\Base62;
 
-use Mockery;
 use PHPUnit_Framework_TestCase;
 use Vinkla\Base62\Base62;
 
