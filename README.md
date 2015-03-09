@@ -20,6 +20,7 @@ $base->decode('5fRVGK'); // returns 4815162342
 ```
 
 [![Build Status](https://img.shields.io/travis/vinkla/base62/master.svg?style=flat)](https://travis-ci.org/vinkla/base62)
+[![StyleCI](https://styleci.io/repos/15844313/shield?style=flat)](https://styleci.io/repos/15844313)
 [![Latest Stable Version](http://img.shields.io/packagist/v/vinkla/base62.svg?style=flat)](https://packagist.org/packages/vinkla/base62)
 [![License](https://img.shields.io/packagist/l/vinkla/base62.svg?style=flat)](https://packagist.org/packages/vinkla/base62)
 
