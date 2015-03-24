@@ -12,6 +12,8 @@ matrix:
   allow_failures:
     - php: 7.0
 
+sudo: false
+
 install:
   - travis_retry composer install --no-interaction --prefer-source
 
