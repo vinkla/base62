@@ -3,7 +3,7 @@ Base62 Algorithm
 
 ![image](https://raw.githubusercontent.com/vinkla/vinkla.github.io/master/images/base62-package.png)
 
-Base62 Algorithm package, convert integers to [base62](http://en.wikipedia.org/wiki/62) strings and back. Works well with [Laravel](https://github.com/laravel/laravel).
+A reversible base62 ID obfuscater. Works well with [Laravel](https://github.com/laravel/laravel).
 
 ```php
 // The base string.

@@ -1,6 +1,6 @@
 {
 	"name": "vinkla/base62",
-	"description": "Base62 Algorithm, convert integers to base62 strings and back.",
+	"description": "A reversible base62 ID obfuscater.",
 	"license": "MIT",
 	"keywords": ["laravel", "uuid", "base62", "base"],
 	"authors": [
