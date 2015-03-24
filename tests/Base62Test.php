@@ -1,8 +1,24 @@
-<?php namespace Vinkla\Tests\Base62;
+<?php
+
+/*
+ * This file is part of Base62.
+ *
+ * (c) Vincent Klaiber <hello@vinkla.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace Vinkla\Tests\Base62;
 
 use PHPUnit_Framework_TestCase;
 use Vinkla\Base62\Base62;
 
+/**
+ * This is the Base62 test class.
+ *
+ * @author Vincent Klaiber <hello@vinkla.com>
+ */
 class Base62Test extends PHPUnit_Framework_TestCase
 {
     public function testEncode()
