@@ -53,7 +53,7 @@ php artisan vendor:publish
 Please use `1.0` branch instead. Installable by requiring:
 
 ```bash
-composer require "vinkla/vimeo=~1.0"
+composer require vinkla/vimeo:~1.0
 ```
 
 ## Usage
