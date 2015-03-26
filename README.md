@@ -112,4 +112,5 @@ App::make('Foo')->bar();
 ```
 
 ## License
-The Base62 package is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+Base62 package is licensed under [The MIT License (MIT)](LICENSE).
