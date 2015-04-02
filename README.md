@@ -50,7 +50,7 @@ php artisan vendor:publish
 
 #### Looking for a Laravel 4 compatable version?
 
-Please use `1.0` branch instead. Installable by requiring:
+Please use [1.0 branch](https://github.com/vinkla/base62/tree/1.0) instead. Installable by requiring:
 
 ```bash
 composer require vinkla/vimeo:~1.0
