@@ -1,6 +1,6 @@
 {
     "name": "vinkla/base62",
-    "description": "A reversible base62 ID obfuscater.",
+    "description": "A reversible base62 ID obfuscator",
     "license": "MIT",
     "keywords": ["laravel", "uuid", "base62", "base", "hashids"],
     "authors": [
