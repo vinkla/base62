@@ -25,6 +25,9 @@
             "Vinkla\\Tests\\Base62\\": "tests/"
         }
     },
+    "config": {
+        "preferred-install": "dist"
+    },
     "extra": {
         "branch-alias": {
             "dev-master": "2.0-dev"
