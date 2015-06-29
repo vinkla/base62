@@ -38,7 +38,11 @@ class Base62ServiceProvider extends ServiceProvider
     protected function setupConfig()
     {
         $source = realpath(__DIR__.'/../config/base62.php');
-        $this->publishes([$source => config_path('base62.php')]);
+
+        if (class_exists('Illuminate\Foundation\Application', false)) {
+            $this->publishes([$source => config_path('base62.php')]);
+        }
+
         $this->mergeConfigFrom($source, 'base62');
     }
 
