@@ -1,12 +1,12 @@
 Base62 Algorithm
 ================
 
+## WARNING!
+#### This package is no longer maintained!
+
 ![base62-package](https://cloud.githubusercontent.com/assets/499192/7440616/09e67fa8-f0c0-11e4-83e6-06e785883cae.png)
 
 A reversible base62 ID obfuscater. Works well with [Laravel](https://github.com/laravel/laravel).
-
-## Warning
-This package is no longer maintained!
 
 ```php
 // The base string.
