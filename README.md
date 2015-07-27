@@ -5,6 +5,9 @@ Base62 Algorithm
 
 A reversible base62 ID obfuscater. Works well with [Laravel](https://github.com/laravel/laravel).
 
+## Warning
+This package is no longer maintained!
+
 ```php
 // The base string.
 $string = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
