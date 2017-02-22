@@ -1,4 +1,4 @@
-## WARNING! This package is no longer maintained!
+## WARNING! This package is no longer maintained.
 
 # Base62 Algorithm
 
