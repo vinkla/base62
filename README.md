@@ -1,6 +1,4 @@
-## WARNING! This package is no longer maintained.
-
-# Base62 Algorithm
+# Base62
 
 ![base62-package](https://cloud.githubusercontent.com/assets/499192/7440616/09e67fa8-f0c0-11e4-83e6-06e785883cae.png)
 
