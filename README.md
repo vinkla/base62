@@ -18,11 +18,6 @@ $base->encode(4815162342); // returns '5fRVGK'
 $base->decode('5fRVGK'); // returns 4815162342
 ```
 
-[![Build Status](https://img.shields.io/travis/vinkla/base62/master.svg?style=flat)](https://travis-ci.org/vinkla/base62)
-[![StyleCI](https://styleci.io/repos/15844313/shield?style=flat)](https://styleci.io/repos/15844313)
-[![Latest Version](https://img.shields.io/github/release/vinkla/base62.svg?style=flat)](https://github.com/vinkla/base62/releases)
-[![License](https://img.shields.io/packagist/l/vinkla/base62.svg?style=flat)](https://packagist.org/packages/vinkla/base62)
-
 ## Installation
 Require this package, with [Composer](https://getcomposer.org/), in the root directory of your project.
 
